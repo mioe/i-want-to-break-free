@@ -2,10 +2,12 @@ version: "3"
 services:
   backend:
     build: "./backend"
+    container_name: backend-golang
     ports:
       - "8080"
   nginx:
     build: "./nginx"
+    container_name: nginx-proxy
     ports:
       - "80:80"
     depends_on:
