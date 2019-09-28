@@ -5,6 +5,11 @@ services:
     container_name: backend-golang
     ports:
       - "8080"
+  frontend:
+    build: "./frontend"
+    container_name: frontend-nuxt-js
+    ports:
+      - "5000"
   nginx:
     build: "./nginx"
     container_name: nginx-proxy
@@ -12,3 +17,4 @@ services:
       - "80:80"
     depends_on:
       - "backend"
+      - "frontend"
