@@ -10,6 +10,9 @@ services:
     container_name: frontend-nuxt-js
     ports:
       - "5000"
+    volumes:
+      - /usr/src/nuxt-app/node_modules
+      - ./frontend:/usr/src/nuxt-app
   nginx:
     build: ./nginx
     container_name: nginx-proxy

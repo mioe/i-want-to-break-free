@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        frontend
+        frontend-nuxt-js
       </h1>
       <h2 class="subtitle">
         My funkadelic Nuxt.js project
