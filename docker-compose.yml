@@ -1,17 +1,17 @@
 version: "3"
 services:
   backend:
-    build: "./backend"
+    build: ./backend
     container_name: backend-golang
     ports:
       - "8080"
   frontend:
-    build: "./frontend"
+    build: ./frontend
     container_name: frontend-nuxt-js
     ports:
       - "5000"
   nginx:
-    build: "./nginx"
+    build: ./nginx
     container_name: nginx-proxy
     ports:
       - "80:80"
